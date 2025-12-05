@@ -1,44 +1,28 @@
 {
-  "name": "neuroload-mobile",
+  "name": "neuroload-expo",
   "version": "1.0.0",
-  "description": "NeuroLoad - Cognitive Performance Tracker",
   "main": "index.js",
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
-    "start": "react-native start",
-    "test": "jest",
-    "lint": "eslint ."
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
   },
   "dependencies": {
-    "react": "18.2.0",
-    "react-native": "0.72.0",
-    "@react-navigation/native": "^6.1.7",
-    "@react-navigation/bottom-tabs": "^6.5.8",
-    "@react-navigation/stack": "^6.3.17",
-    "react-native-screens": "^3.22.0",
-    "react-native-safe-area-context": "^4.6.3",
-    "react-native-gesture-handler": "^2.12.0",
-    "axios": "^1.4.0",
+    "@react-native-async-storage/async-storage": "^2.2.0",
+    "@react-navigation/bottom-tabs": "^7.8.11",
+    "@react-navigation/native": "^7.1.24",
+    "@react-navigation/stack": "^7.6.11",
+    "axios": "^1.13.2",
+    "expo": "~54.0.26",
+    "expo-status-bar": "~3.0.8",
+    "react": "19.1.0",
+    "react-native": "0.81.5",
     "react-native-chart-kit": "^6.12.0",
-    "react-native-svg": "^13.9.0",
-    "react-native-audio-recorder-player": "^3.5.3",
-    "react-native-permissions": "^3.8.0",
-    "@react-native-async-storage/async-storage": "^1.19.1",
-    "react-native-vector-icons": "^10.0.0"
+    "react-native-gesture-handler": "^2.29.1",
+    "react-native-safe-area-context": "^5.6.2",
+    "react-native-screens": "^4.18.0",
+    "react-native-svg": "^15.15.1"
   },
-  "devDependencies": {
-    "@babel/core": "^7.22.5",
-    "@babel/runtime": "^7.22.5",
-    "@react-native/eslint-config": "^0.72.2",
-    "@react-native/metro-config": "^0.72.7",
-    "babel-jest": "^29.5.0",
-    "eslint": "^8.44.0",
-    "jest": "^29.5.0",
-    "metro-react-native-babel-preset": "^0.76.5",
-    "react-test-renderer": "18.2.0"
-  },
-  "engines": {
-    "node": ">=16"
-  }
+  "private": true
 }

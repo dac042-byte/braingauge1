@@ -1,16 +1,19 @@
 /**
- * NeuroLoad Mobile App - Expo Version
+ * NeuroLoad Mobile App
+ * Main entry point
  */
 import React from 'react';
 import { StatusBar } from 'react-native';
 import AppNavigator from './src/navigation/AppNavigator';
 import { CONFIG } from './src/config';
 
-export default function App() {
+const App = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" backgroundColor={CONFIG.COLORS.background} />
       <AppNavigator />
     </>
   );
-}
+};
+
+export default App;
