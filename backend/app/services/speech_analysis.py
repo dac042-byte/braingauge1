@@ -3,7 +3,13 @@ import re
 from typing import Dict, Optional
 from openai import OpenAI
 from app.core.config import settings
-import numpy as np
+
+# Try to import numpy, fall back to basic Python if not available
+try:
+    import numpy as np
+    HAS_NUMPY = True
+except ImportError:
+    HAS_NUMPY = False
 
 client = OpenAI(api_key=settings.OPENAI_API_KEY)
 
@@ -93,7 +99,10 @@ class SpeechAnalysisService:
                     pauses.append(pause)
 
             if pauses:
-                avg_pause_length = np.mean(pauses)
+                if HAS_NUMPY:
+                    avg_pause_length = np.mean(pauses)
+                else:
+                    avg_pause_length = sum(pauses) / len(pauses)
 
         return {
             "words_per_minute": round(words_per_minute, 2),

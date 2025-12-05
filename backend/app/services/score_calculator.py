@@ -1,5 +1,4 @@
 from typing import Dict, Optional
-import numpy as np
 from app.core.config import settings
 
 
